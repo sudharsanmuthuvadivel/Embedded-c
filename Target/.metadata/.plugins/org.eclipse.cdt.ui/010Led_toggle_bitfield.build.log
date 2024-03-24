@@ -1,0 +1,17 @@
+06:36:33 **** Incremental Build of configuration Debug for project 010Led_toggle_bitfield ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "010Led_toggle_bitfield.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Embedded_C\My_workspace\Target\010Led_toggle_bitfield\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="010Led_toggle_bitfield.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 010Led_toggle_bitfield.elf
+ 
+arm-none-eabi-size  010Led_toggle_bitfield.elf 
+arm-none-eabi-objdump -h -S 010Led_toggle_bitfield.elf  > "010Led_toggle_bitfield.list"
+   text	   data	    bss	    dec	    hex	filename
+    756	      8	   1568	   2332	    91c	010Led_toggle_bitfield.elf
+Finished building: default.size.stdout
+ 
+Finished building: 010Led_toggle_bitfield.list
+ 
+
+06:36:33 Build Finished. 0 errors, 0 warnings. (took 469ms)
+

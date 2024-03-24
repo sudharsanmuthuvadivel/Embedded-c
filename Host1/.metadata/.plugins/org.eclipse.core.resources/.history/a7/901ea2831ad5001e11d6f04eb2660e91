@@ -1,0 +1,75 @@
+/*
+ Mamaging Student record
+ */
+#include<stdint.h>
+#include<stdio.h>
+#include<string.h>
+
+typedef struct{
+	int rollnumber;
+	char name[30];
+	char branch[30];
+	int dob;
+	int semester;
+	float cgpa;
+}STUDENT_INFO_t;
+
+int max_rec = 20;
+STUDENT_INFO_t students_rec[max_rec];
+
+void display_allstudent_rec(STUDENT_INFO_t* ,int8_t);
+
+int main(void)
+{
+	int8_t choice;
+	while(1)
+	{
+		printf("\n*********LIST MENU*********\n");
+		printf("Display all record->      1\n");
+		printf("Add new record    ->      2\n");
+		printf("Delete a record   ->      3\n");
+		printf("Exit application  ->      0\n");
+		printf("Enter your choice here:");
+		scanf("%d",&choice);
+
+		switch(choice){
+		case 1://display the all the record
+			printf("Display all students records.\n");
+			display_allstudent_rec(student_rec , max_rec);
+
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 0:
+			exit(0);
+			break;
+		default:
+			break;
+		}
+	}
+	return 0;
+}
+void display_allstudent_rec(STUDENT_INFO_t* prec,int8_t max_rec)
+{
+	int rec_found = 0;
+	for(int i=0; i < max_rec; i++)
+	{
+		if(prec[i].rollnumber)
+		{
+			rec_found = 1;
+			printf("***************************\n");
+			printf("Student name       %s\n",prec[i].name);
+			printf("Student rollnumber %d\n", prec[i].rollnumber);
+			printf("Student branch     %s\n", prec[i].branch);
+			printf("Student dob        %d\n", prec[i].dob);
+			printf("Student semester   %u\n", prec[i].semester);
+			printf("Student CGPA       %0.2f\n", prec[i].cgpa);
+			printf("***************************\n");
+		}
+	}
+	if(! rec_found)
+		printf("No record found\n");
+}
+

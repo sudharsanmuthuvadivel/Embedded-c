@@ -1,0 +1,19 @@
+//macros//conditional compilation
+
+#include<stdint.h>
+#include<stdio.h>
+#define pi 3.1415
+
+int main(void){
+
+#if 1
+	float radius = 0;
+	printf("This is circle calculation program\n");
+	fflush(stdout);
+	printf("Enter the radius :");
+	fflush(stdout);
+	scanf("%f", &radius);
+	printf("Area of the circle = %f \n", (pi * radius * radius));
+	fflush(stdout);
+#endif
+}

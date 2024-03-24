@@ -1,0 +1,17 @@
+09:26:04 **** Incremental Build of configuration Debug for project data_packed ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "data_packed.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Embedded_C\My_workspace\Target\data_packed\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="data_packed.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: data_packed.elf
+ 
+arm-none-eabi-size  data_packed.elf 
+arm-none-eabi-objdump -h -S data_packed.elf  > "data_packed.list"
+   text	   data	    bss	    dec	    hex	filename
+   5004	    100	   1908	   7012	   1b64	data_packed.elf
+Finished building: default.size.stdout
+ 
+Finished building: data_packed.list
+ 
+
+09:26:05 Build Finished. 0 errors, 0 warnings. (took 949ms)
+

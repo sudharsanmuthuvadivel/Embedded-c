@@ -1,0 +1,21 @@
+/*
+
+ */
+
+#include<stdint.h>
+#include<stdio.h>
+
+int main(void){
+	char msg1[] = "Hello how are you?";
+	char const *pmsg2 = "sunms2000@gmail.com";
+
+	msg1[0] = 'B';
+	//pmsg2[0] = 'B';
+
+	printf("Message is : %s\n", msg1);
+	printf("Message is : %s\n", pmsg2);
+	printf("Address of msg2 variable: %p\n", &pmsg2);//RAM
+	printf("Address of msg2 variable: %p\n", pmsg2);//Flash or rom
+
+	return 0;
+}

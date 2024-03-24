@@ -1,0 +1,8 @@
+08:12:30 **** Rebuild of configuration Debug for project math ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o math.o "..\\math.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o math.exe main.o math.o 
+
+08:12:31 Build Finished. 0 errors, 0 warnings. (took 904ms)
+

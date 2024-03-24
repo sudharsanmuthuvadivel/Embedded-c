@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ledONbit&apos; to &apos;led_ON_bitwise&apos;" description="Rename resource &apos;ledONbit&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ledONbit" name="led_ON_bitwise" stamp="1706163754860" updateReferences="true"/>
+</session>

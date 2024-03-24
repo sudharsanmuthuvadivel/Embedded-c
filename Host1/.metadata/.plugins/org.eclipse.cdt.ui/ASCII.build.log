@@ -1,0 +1,7 @@
+08:12:16 **** Rebuild of configuration Debug for project ASCII ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main_getchar.o "..\\main_getchar.c" 
+gcc -o ASCII.exe main_getchar.o 
+
+08:12:16 Build Finished. 0 errors, 0 warnings. (took 562ms)
+
